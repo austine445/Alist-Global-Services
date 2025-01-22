@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional architectural plans and services by Alist Global Services.">
+    <meta name="keywords" content="architectural plans, design services, Alist Global Services, residential plans, commercial plans">
+    <meta name="author" content="Alist Global Services">
+    <title>Alist Global Services</title>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 2rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .plans {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .plan {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .plan button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .plan button:hover {
+            background: #555;
+        }
+
+        article {
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 0;
+        }
+
+        article a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #555;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .portfolio-item {
+            width: 30%;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            background: #f9f9f9;
+        }
+
+        .testimonial {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .plans {
+                flex-direction: column;
+            }
+
+            .plan {
+                width: 90%;
+                margin: auto;
+            }
+
+            .portfolio-item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="Alist.jpg" alt="Alist Global Services Logo">
+            <h1>Alist Global Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Alist Global Services. We provide top-quality architectural plans tailored to your needs. Explore our services and find the perfect plan for your next project.</p>
+        </div>
+    </section>
+
+    <section id="plans" class="section">
+        <div class="container">
+            <h2>Purchase Plans</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Plan A</h3>
+                    <p>Residential building plan, 1500 sq ft.</p>
+                    <button onclick="payWithPaystack('Plan A', 10000)">Purchase for $100</button>
+                </div>
+                <div class="plan">
+                    <h3>Plan B</h3>
+                    <p>Commercial building plan, 3000 sq ft.</p>
+                    <button onclick="payWithPaystack('Plan B', 20000)">Purchase for $200</button>
+                </div>
+                <div class="plan">
+                    <h3>Custom Plan</h3>
+                    <p>Work with us to design your dream project.</p>
+                    <button onclick="payWithPaystack('Custom Plan', 50000)">Purchase for $500</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Residential Project">
+                    <h3>Residential Project</h3>
+                    <p>Description of the residential project.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Commercial Project">
+                    <h3>Commercial Project</h3>
+                    <p>Description of the commercial project.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Industrial Project">
+                    <h3>Industrial Project</h3>
+                    <p>Description of the industrial project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <img src="client1.jpg" alt="Client 1">
+                <p>"Alist Global Services delivered exceptional quality and service!"</p>
+                <h4>- Client Name</h4>
+            </div>
+            <div class="testimonial">
+                <img src="client2.jpg" alt="Client 2">
+                <p>"Highly recommend their architectural plans for any project."</p>
+                <h4>- Client Name</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <div class="container">
+            <h2>Blog</h2>
+            <article>
+                <h3>Top 5 Architectural Trends for 2025</h3>
+                <p>Discover the latest trends shaping the world of architecture.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <h3>How to Choose the Right Building Plan</h3>
+                <p>Tips and tricks to help you select the best plan for your needs.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <h3>Designing Sustainable Homes</h3>
+                <p>Learn about eco-friendly architecture and sustainable designs.</p>
+                <a href="#">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email us at <a href="mailto:info@alistglobalservices.com">info@alistglobalservices.com</a></p>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alist Global Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function payWithPaystack(plan, amount) {
+            let handler = PaystackPop.setup({
+                key: 'YOUR_PUBLIC_KEY', // Replace with your Paystack public key
+                email: 'customer@example.com',
+                amount: amount * 100, // Convert amount to kobo
+                currency: 'USD',
+                ref: 'PSK_' + Math.floor((Math.random() * 1000000000) + 1),
+                callback: function(response) {
+                    alert(`Payment for ${plan} successful. Transaction Ref: ` + response.reference);
+                },
+                onClose: function() {
+                    alert('Transaction was not completed.');
+                }
+            });
+            handler.openIframe();
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
